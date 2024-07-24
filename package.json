@@ -12,14 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.9",
+    "@vuepress/bundler-vite": "2.0.0-rc.14",
     "vue": "^3.4.27",
-    "vuepress": "2.0.0-rc.9",
-    "vuepress-theme-plume": "1.0.0-rc.51"
+    "vuepress": "2.0.0-rc.14",
+    "vuepress-theme-plume": "1.0.0-rc.81"
   },
   "dependencies": {
+    "@vuepress-plume/plugin-shikiji": "1.0.0-rc.81",
     "flowchart.ts": "^3.0.0",
     "mermaid": "^10.9.1",
-    "vuepress-plugin-md-power": "1.0.0-rc.68"
+    "vuepress-plugin-md-power": "1.0.0-rc.81"
   }
 }

@@ -1,0 +1,22 @@
+---
+title: 学历
+author: HiCheer
+createTime: 2024/07/24 10:28:02
+permalink: /en/user/education/
+---
+
+### 高中
+
+··· 待上传 ···
+
+---
+### 大专
+
+··· 待上传 ···
+
+---
+### 本科
+
+··· 待上传 ···
+
+---

@@ -3,6 +3,11 @@ title: 单体服务到微服务
 author: HiCheer
 createTime: 2024/05/30 01:27:03
 permalink: /article/bwowysm9/
+tags:
+  - 后端
+  - JAVA
+  - Spring
+  - SpringCloud
 ---
 ### 前言
 OK 朋友们在开始之前问一下问题，当然也给了一定答案！！

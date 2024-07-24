@@ -24,8 +24,10 @@ export default defineUserConfig({
 			},
 			search: {
 				page: true
-			}
+			},
+			shiki: {light: 'vitesse-light', dark: 'vitesse-dark', languages: ["c", "cpp", "css", "go", "html", "http", "json", "lua", "nginx", "scss", "sql", "xml", "yaml", "javascript", "shellscript", "vue", "vue-html"], lineNumbers: false },
 		},
+		lineNumbers: false,
 		// 导航栏左边的 logo，logo浅色时，logoDark深色时
 		// logo: '',
 		// logoDark: '',
@@ -68,7 +70,28 @@ export default defineUserConfig({
 				navbar: [
 					{ text: '首页', link: '/', icon: 'material-symbols:home-outline' },
 					{ text: '博客', link: '/blog/', icon: 'material-symbols:article-outline' },
-					{ text: '简历', link: '/user/resume/', icon: 'mdi:resume' },
+					// { text: '简历', link: '/user/resume/', icon: 'mdi:resume' },
+					{
+						text: '个人',
+						icon: 'icon-park:personal-collection',
+						items: [
+								{
+									text: '简历',
+									link: '/user/resume/',
+									icon: 'mdi:resume',
+								},
+								{
+									text: '学历',
+									link: '/user/education/',
+									icon: 'mdi:education-outline',
+								},
+								{
+									text: '证书',
+									link: '/user/certificate/',
+									icon: 'ph:certificate-duotone',
+								}
+						]
+					},
 					{
 						text: '笔记',
 						icon: 'emojione-v1:note-pad',
@@ -193,6 +216,27 @@ export default defineUserConfig({
 					{ text: 'Home', link: '/en/', icon: 'material-symbols:home-outline' },
 					{ text: 'Blog', link: '/en/blog/', icon: 'material-symbols:article-outline' },
 					{ text: 'Resume', link: '/en/user/resume/', icon: 'mdi:resume' },
+					{
+						text: 'Individual',
+						icon: 'icon-park:personal-collection',
+						items: [
+							{
+								text: 'Resume',
+								link: '/en/user/resume/',
+								icon: 'mdi:resume',
+							},
+							{
+								text: 'Education',
+								link: '/en/user/education/',
+								icon: 'mdi:education-outline',
+							},
+							{
+								text: 'Certificate',
+								link: '/en/user/certificate/',
+								icon: 'ph:certificate-duotone',
+							}
+						]
+					},
 					{
 						text: 'notes',
 						icon: 'emojione-v1:note-pad',
