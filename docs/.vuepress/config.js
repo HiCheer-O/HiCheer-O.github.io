@@ -215,7 +215,6 @@ export default defineUserConfig({
 				navbar: [
 					{ text: 'Home', link: '/en/', icon: 'material-symbols:home-outline' },
 					{ text: 'Blog', link: '/en/blog/', icon: 'material-symbols:article-outline' },
-					{ text: 'Resume', link: '/en/user/resume/', icon: 'mdi:resume' },
 					{
 						text: 'Individual',
 						icon: 'icon-park:personal-collection',
