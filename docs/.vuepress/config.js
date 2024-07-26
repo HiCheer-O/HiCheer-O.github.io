@@ -22,8 +22,13 @@ export default defineUserConfig({
 			markdownPower: {
 				pdf: true,
 			},
-			search: {
-				page: true
+			// search: {
+			// 	page: true
+			// },
+			docsearch: {
+				appId: 'U9GM6Y9OGX',
+				apiKey: 'aa64732f2de491282924a3532df0f36c',
+				indexName: 'HiCheer_Blog',
 			},
 			shiki: {light: 'vitesse-light', dark: 'vitesse-dark', languages: ["c", "cpp", "css", "go", "html", "http", "json", "lua", "nginx", "scss", "sql", "xml", "yaml", "javascript", "shellscript", "vue", "vue-html"], lineNumbers: false },
 		},
