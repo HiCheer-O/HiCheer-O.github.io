@@ -162,11 +162,23 @@ export default defineUserConfig({
 									collapsed: true,
 									items: [
 										{
-											text: '2024年的炎炎夏热',
+											text: '自己',
 											link: '/live/live-001/',
 											dir: '/live/live-001/',
 											items: []
-										}
+										},
+										{
+											text: '在能力范围内做自己能做的事',
+											link: '/live/live-002/',
+											dir: '/live/live-002/',
+											items: []
+										},
+										{
+											text: '喜欢一个人没必要全心全意的付出',
+											link: '/live/live-003/',
+											dir: '/live/live-003/',
+											items: []
+										},
 									]
 								}
 							]
