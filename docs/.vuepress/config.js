@@ -29,8 +29,6 @@ export default defineUserConfig({
 				appId: "JFCS40HD77",
 				apiKey: "b58f47d17386a2185e1371aa8f959ba1",
 				indexName: "hicheer-oio",
-				container: '### REPLACE ME WITH A CONTAINER (e.g. div) ###',
-				debug: false
 			},
 			shiki: {light: 'vitesse-light', dark: 'vitesse-dark', languages: ["c", "cpp", "css", "go", "html", "http", "json", "lua", "nginx", "scss", "sql", "xml", "yaml", "javascript", "shellscript", "vue", "vue-html"], lineNumbers: false },
 		},
