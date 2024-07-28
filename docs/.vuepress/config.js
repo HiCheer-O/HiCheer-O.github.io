@@ -26,9 +26,9 @@ export default defineUserConfig({
 			// 	page: true
 			// },
 			docsearch: {
-				appId: 'U9GM6Y9OGX',
-				apiKey: 'aa64732f2de491282924a3532df0f36c',
-				indexName: 'HiCheer_Blog',
+				appId: 'JFCS40HD77',
+				apiKey: 'b58f47d17386a2185e1371aa8f959ba1',
+				indexName: 'hicheer-oio',
 			},
 			shiki: {light: 'vitesse-light', dark: 'vitesse-dark', languages: ["c", "cpp", "css", "go", "html", "http", "json", "lua", "nginx", "scss", "sql", "xml", "yaml", "javascript", "shellscript", "vue", "vue-html"], lineNumbers: false },
 		},
