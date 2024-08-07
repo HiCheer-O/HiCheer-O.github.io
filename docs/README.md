@@ -22,5 +22,4 @@ config:
           link: https://github.com/HiCheer-O
           theme: alt
 ---
-啊还是科技大厦卡激活的夸奖
 <!-- more -->

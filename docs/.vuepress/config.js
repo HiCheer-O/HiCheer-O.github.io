@@ -60,7 +60,7 @@ export default defineUserConfig({
 		// 博客设置
 		blog: {
 			pagination: {
-				perPage: 5
+				perPage: 10
 			},
 			// 是否启用标签页
 			tags: true,
