@@ -85,7 +85,7 @@ tags:
   | 七牛云              | https://reg-mirror.qiniu.com                 |   ✅✅✅✅  |
   | 网易云              | https://hub-mirror.c.163.com                 |   ✅✅✅✅  |
   | 腾讯云              | https://mirror.ccs.tencentyun.com            |   ✅✅✅✅  |
-  | 未知地址            | https://1panel.live/                         |   ✅✅✅✅  |
+  | 1panel             | https://1panel.live/                         |   ✅✅✅✅  |
 
 ### 构建 Docker 镜像
 1. Docker 模板
