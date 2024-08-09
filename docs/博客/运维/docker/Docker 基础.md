@@ -4,7 +4,8 @@ author: HiCheer
 createTime: 2024/07/22 18:13:35
 permalink: /article/2o3afe58/
 tags:
-  - 后端
+  - 运维
+  - 基础
   - Docker
 ---
 
@@ -68,7 +69,7 @@ tags:
     ```bash
     sudo systemctl stop docker
     ```
-   
+
 ### 配置镜像源
 - 修改配置文件
     ```bash
@@ -191,30 +192,25 @@ tags:
     docker logout http://192.168.2.80:4000 
     ```
 
-### Docker 常见异常
-1. 登录异常（注册表默认不支持HTTP）
-    
-    错误信息：
+### 复制镜像内文件
+
+ 1. 通过镜像名称
+
     ```bash
-    docker login http://192.168.2.80:4000  
-    Username: admin
-    Password:
-    Error response from daemon: Get "https://192.168.2.80:4000/v2/": http: server gave HTTP response to HTTPS client
+    dcoker cp 镜像ID:/docker内文件地址 /docker外文件地址
     ```
-    原因：
-    ```text
-    因为 Docker 默认使用 HTTPS 协议连接到注册表，而你的注册表似乎只支持 HTTP。
-    因此，当 Docker 尝试通过 HTTPS 访问 http://192.168.2.80:4000 时，
-    服务器返回了一个错误，因为它不支持 HTTPS
-    ```
-    解决方案：
-    ```text
-    在 etc/docker/daemon.json 中添加 `"insecure-registries": ["仓库地址"]`
-    ```
-    例如：
-    ```json
-    {
-       "insecure-registries": ["192.168.2.80:4000"]
-    }
-    ```
+
+### 镜像<-->压缩包
+
+1. 镜像 -> 压缩包
+
+   ```bash
+   docker save -o 压缩包.tar 镜像
+   ```
+
+2. 压缩包 -> 镜像
+
+   ```bash
+   docker load -i 压缩包.tar
+   ```
 
