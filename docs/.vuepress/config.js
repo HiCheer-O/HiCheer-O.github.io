@@ -67,11 +67,42 @@ export default defineUserConfig({
 			// 是否启用归档页
 			archives: true
 		},
+		// 文章加密
+		encrypt: {
+			// 全局加密
+			// global: true,
+			// admin: ['123456'],
+			
+			// 部分文章加密
+			rules: {
+				// 简历
+				'/en/user/resume/' : 'hicheer',
+				'/user/resume/' : 'hicheer',
+				// 个人信息
+				'^/user/(education|certificate)' : 'cdd',
+				'^/en/user/(education|certificate)' : 'cdd',
+				// 心得
+				'^/(|live|book|movie)/': '58691427',
+				'^/en/(|live|book|movie)/': '58691427',
+				// 经历
+				'^/experience/': '58691427Chen',
+				'^/en/experience/': '58691427Chen',
+			}
+		},
 		// 文章链接前缀
 		article: '/article/',
 		// 设置导航
 		locales: {
 			'/': {
+				// 全局文章加密提示信息
+				encryptGlobalText: '请联系博客作者获取密码',
+				// 部分文章加密提示信息
+				encryptPageText: '请联系博客作者获取密码',
+				// 密码占位符
+				encryptPlaceholder: '请输入密码',
+				// 文章加密按钮信息
+				encryptButtonText: '确认',
+
 				navbar: [
 					{ text: '首页', link: '/', icon: 'material-symbols:home-outline' },
 					{ text: '博客', link: '/blog/', icon: 'material-symbols:article-outline' },
