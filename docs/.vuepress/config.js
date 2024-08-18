@@ -82,11 +82,11 @@ export default defineUserConfig({
 				'^/user/(education|certificate)' : 'cdd',
 				'^/en/user/(education|certificate)' : 'cdd',
 				// 心得
-				'^/(|live|book|movie)/': '58691427',
-				'^/en/(|live|book|movie)/': '58691427',
+				'^/(live|book|movie)/': '58691427',
+				'^/en/(live|book|movie)/': '58691427',
 				// 经历
-				'^/experience/': '58691427Chen',
-				'^/en/experience/': '58691427Chen',
+				'^/(high-school|university|work)/': '58691427Chen',
+				'^/en/(high-school|university|work)/': '58691427Chen',
 			}
 		},
 		// 文章链接前缀
@@ -159,17 +159,17 @@ export default defineUserConfig({
 								items: [
 									{
 										text: '工作',
-										link: '/experience/work/',
+										link: '/work/',
 										icon: 'healthicons:military-worker-outline',
 									},
 									{
 										text: '大学',
-										link: '/experience/university/',
+										link: '/university/',
 										icon: 'mdi:university-outline',
 									},
 									{
 										text: '高中',
-										link: '/experience/high-school/',
+										link: '/high-school/',
 										icon: 'mingcute:school-line',
 									},
 								],
@@ -194,20 +194,20 @@ export default defineUserConfig({
 									items: [
 										{
 											text: '自己',
-											link: '/live/live-001/',
-											dir: '/live/live-001/',
+											link: '/live/001/',
+											dir: '/live-001/',
 											items: []
 										},
 										{
 											text: '在能力范围内做自己能做的事',
-											link: '/live/live-002/',
-											dir: '/live/live-002/',
+											link: '/live/002/',
+											dir: '/live-002/',
 											items: []
 										},
 										{
 											text: '喜欢一个人没必要全心全意的付出',
-											link: '/live/live-003/',
-											dir: '/live/live-003/',
+											link: '/live/003/',
+											dir: '/003/',
 											items: []
 										},
 									]
@@ -227,8 +227,8 @@ export default defineUserConfig({
 									items: [
 										{
 											text: '钢铁是怎么炼成的',
-											link: '/book/book-001/',
-											dir:  '/book/book-001/',
+											link: '/book/001/',
+											dir:  '/001/',
 											items: []
 										}
 									]
@@ -248,8 +248,71 @@ export default defineUserConfig({
 									items: [
 										{
 											text: '泰坦尼克号',
-											link: '/movie/movie-001/',
-											dir:  '/movie/movie-001/',
+											link: '/movie/001/',
+											dir:  '/001/',
+											items: []
+										}
+									]
+								}
+							]
+						},
+						{
+							text: '大学',
+							link: '/university/',
+							dir: '/university/',
+							sidebar: [
+								{
+									text: '大学',
+									link: '/university/',
+									dir: '/university/',
+									collapsed: true,
+									items: [
+										{
+											text: '前言',
+											link: '/university/001/',
+											dir:  '/001/',
+											items: []
+										}
+									]
+								}
+							]
+						},
+						{
+							text: '工作',
+							link: '/work/',
+							dir: '/work/',
+							sidebar: [
+								{
+									text: '工作',
+									link: '/work/',
+									dir: '/work/',
+									collapsed: true,
+									items: [
+										{
+											text: '第一份工作',
+											link: '/work/001/',
+											dir:  '/001/',
+											items: []
+										}
+									]
+								}
+							]
+						},
+						{
+							text: '高中',
+							link: '/high-school/',
+							dir: '/high-school/',
+							sidebar: [
+								{
+									text: '高中',
+									link: '/high-school/',
+									dir: '/high-school/',
+									collapsed: true,
+									items: [
+										{
+											text: '高三',
+											link: '/high-school/001/',
+											dir:  '/001/',
 											items: []
 										}
 									]
@@ -315,17 +378,17 @@ export default defineUserConfig({
 								items: [
 									{
 										text: 'Work',
-										link: '/en/experience/work/',
+										link: '/en/work/',
 										icon: 'healthicons:military-worker-outline',
 									},
 									{
 										text: 'University',
-										link: '/en/experience/university/',
+										link: '/en/university/',
 										icon: 'mdi:university-outline',
 									},
 									{
 										text: 'High-School',
-										link: '/en/experience/high-school/',
+										link: '/en/high-school/',
 										icon: 'mingcute:school-line',
 									},
 								],
@@ -339,7 +402,7 @@ export default defineUserConfig({
 					notes: [
 						{
 							text: 'Live',
-							link: '/live/',
+							link: '/en/live/',
 							dir: '/live/',
 							sidebar: [
 								{
@@ -350,8 +413,8 @@ export default defineUserConfig({
 									items: [
 										{
 											text: 'The scorching summer heat of 2024',
-											link: '/en/live/live-001/',
-											dir: '/live/live-001/',
+											link: '/en/live/001/',
+											dir: '/001/',
 											items: []
 										}
 									]
@@ -360,7 +423,7 @@ export default defineUserConfig({
 						},
 						{
 							text: 'Book',
-							link: '/book/',
+							link: '/en/book/',
 							dir: '/book/',
 							sidebar: [
 								{
@@ -371,8 +434,8 @@ export default defineUserConfig({
 									items: [
 										{
 											text: 'How is steel made?',
-											link: '/en/book/book-001/',
-											dir:  '/book/book-001/',
+											link: '/en/book/001/',
+											dir:  '/001/',
 											items: []
 										}
 									]
@@ -381,7 +444,7 @@ export default defineUserConfig({
 						},
 						{
 							text: 'Movie',
-							link: '/movie/',
+							link: '/en/movie/',
 							dir: '/movie/',
 							sidebar: [
 								{
@@ -392,11 +455,53 @@ export default defineUserConfig({
 									items: [
 										{
 											text: 'Titanic',
-											link: '/en/movie/movie-001/',
-											dir:  '/movie/movie-001/',
+											link: '/en/movie/001/',
+											dir:  '/001/',
 											items: []
 										}
 									]
+								}
+							]
+						},
+						{
+							text: 'University',
+							link: '/en/university/',
+							dir: '/university/',
+							sidebar: [
+								{
+									text: 'University',
+									link: '/en/university/',
+									dir: '/university/',
+									collapsed: true,
+									items: []
+								}
+							]
+						},
+						{
+							text: 'Work',
+							link: '/en/work/',
+							dir: '/work/',
+							sidebar: [
+								{
+									text: 'Work',
+									link: '/en/work/',
+									dir: '/work/',
+									collapsed: true,
+									items: []
+								}
+							]
+						},
+						{
+							text: 'High-School',
+							link: '/en/high-school/',
+							dir: '/high-school/',
+							sidebar: [
+								{
+									text: 'High-School',
+									link: '/en/high-school/',
+									dir: '/high-school/',
+									collapsed: true,
+									items: []
 								}
 							]
 						},
