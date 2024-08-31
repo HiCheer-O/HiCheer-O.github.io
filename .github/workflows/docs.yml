@@ -26,9 +26,9 @@ jobs:
           node-version: 20
           cache: pnpm
 
-      # 创建 CNAME 文件
+      # 创建 CNAME 文件到 public 目录
       - name: Create CNAME file
-        run: echo "blog.hicheer.cc" > docs/.vuepress/dist/CNAME
+        run: echo "blog.hicheer.cc" > docs/.vuepress/public/CNAME
 
       # 运行构建脚本
       - name: Build VuePress site
