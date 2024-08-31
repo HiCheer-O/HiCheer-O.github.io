@@ -289,7 +289,7 @@ export default defineUserConfig({
 									collapsed: true,
 									items: [
 										{
-											text: '第一份工作',
+											text: '人生工作第一次空窗期',
 											link: '/work/001/',
 											dir:  '/001/',
 											items: []
