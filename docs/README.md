@@ -4,7 +4,7 @@ config:
   -
     type: banner
     full: true
-    banner: https://coupon.heke100.com/hk-data/2024/05/25/95e696f4a31b4e7d8c82df1f7402abf8.png
+    banner: https://blog.hicheer.cc:3001/blog/cover/cover-01.png
     bannerMask:
       light: 0.1
       dark: 0.3

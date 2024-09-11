@@ -41,7 +41,7 @@ export default defineUserConfig({
 		// 作者信息
 		avatar: {
 			// 头像
-			url: 'https://coupon.heke100.com/hk-data/2024/05/25/3c3d44c8a08343fda93204a1d121b852.png',
+			url: 'https://blog.hicheer.cc:3001/blog/avatar/avatar.png',
 			// 昵称
 			name: 'HiCheer',
 			// 描述
