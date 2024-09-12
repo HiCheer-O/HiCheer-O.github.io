@@ -36,7 +36,7 @@ jobs:
 
       # 上传构建产物为 artifact
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: vuepress-build
           path: docs/.vuepress/dist
