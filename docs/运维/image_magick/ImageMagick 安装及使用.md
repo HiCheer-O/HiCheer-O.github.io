@@ -1,12 +1,12 @@
 ---
-title: 图片格式转换（ImageMagick）
+title: ImageMagick 安装及使用（图片格式转换）
 author: HiCheer
 createTime: 2024/08/07 16:13:40
 permalink: /article/fuld8glo/
 tags:
-  - 后端
   - 运维
   - ImageMagick
+  - Java
 ---
 
 ### 简介

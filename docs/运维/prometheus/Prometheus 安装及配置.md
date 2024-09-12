@@ -1,11 +1,11 @@
 ---
-title: Prometheus 基础
+title: Prometheus 安装及配置
 author: HiCheer
 createTime: 2024/08/09 20:20:35
 permalink: /article/4nv5oawj/
 tags:
   - 运维
-  - 基础
+  - Docker
   - Grafana
   - Prometheus
 ---

@@ -6,7 +6,7 @@ permalink: /article/bwowysm9/
 tags:
   - 后端
   - JAVA
-  - Spring
+  - SpringBoot
   - SpringCloud
 ---
 ### 前言
