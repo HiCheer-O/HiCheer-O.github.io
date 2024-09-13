@@ -74,6 +74,12 @@ tags:
     ```bash
     sudo vim /etc/docker/daemon.json
     ```
+- 重新加载配置并重启
+    ```bash
+    sudo systemctl daemon-reload
+    sudo systemctl restart docker
+    ```
+  
 - 相关镜像源
   | 镜像加速器           | 镜像加速器地址                                 |  当前状态     |
   |  ----------------- | -------------------------------------------- | ------------ |
