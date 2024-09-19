@@ -23,7 +23,7 @@ tags:
 
 ### 安装
 
-1. 创建 mysql 文件夹及进入mysql 文件夹
+1. 创建 minio 文件夹及进入minio 文件夹
 
    ```bash
    mkdir /opt/minio && cd /opt/minio
