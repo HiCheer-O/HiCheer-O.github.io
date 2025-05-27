@@ -10,15 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-          run_install: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -26,31 +21,26 @@ jobs:
           node-version: 20
           cache: pnpm
 
-      # 运行构建脚本
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
+
+      - name: Install dependencies (国内镜像)
+        run: |
+          pnpm config set registry https://registry.npmmirror.com
+          pnpm install
+
       - name: Build VuePress site
         run: pnpm build
 
-#      # 创建 CNAME 文件到 dist 目录中
-#      - name: Create CNAME file
-#        run: echo "blog.hicheer.cc" > docs/.vuepress/dist/CNAME
-
-      # 上传构建产物为 artifact
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: vuepress-build
-          path: docs/.vuepress/dist
-
-      # 下载并部署 artifact
-      - name: Download Artifact and Deploy to GitHub Pages
-        uses: actions/download-artifact@v3
-        with:
-          name: vuepress-build
+      - name: Create CNAME file
+        run: echo "blog.hicheer.cc" > docs/.vuepress/dist/CNAME
 
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: docs/.vuepress/dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vuepress/dist
+          publish_branch: gh-pages
