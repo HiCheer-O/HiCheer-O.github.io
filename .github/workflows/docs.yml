@@ -22,12 +22,10 @@ jobs:
           cache: 'pnpm'
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
           version: 9
-
-      - name: Install dependencies
-        run: pnpm install
+          run_install: true  # 自动 pnpm install
 
       - name: Build VuePress site
         run: pnpm build
