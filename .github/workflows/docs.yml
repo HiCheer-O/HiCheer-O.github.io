@@ -11,12 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: pnpm
+          fetch-depth: 0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -24,11 +20,35 @@ jobs:
           version: 9
           run_install: true
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      # 运行构建脚本
       - name: Build VuePress site
         run: pnpm build
 
+      # 创建 CNAME 文件到 dist 目录中
       - name: Create CNAME file
         run: echo "blog.hicheer.cc" > docs/.vuepress/dist/CNAME
+      #      # 创建 CNAME 文件到 dist 目录中
+      #      - name: Create CNAME file
+      #        run: echo "blog.hicheer.cc" > docs/.vuepress/dist/CNAME
+
+      # 上传构建产物为 artifact
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: vuepress-build
+          path: docs/.vuepress/dist
+
+      # 下载并部署 artifact
+      - name: Download Artifact and Deploy to GitHub Pages
+        uses: actions/download-artifact@v3
+        with:
+          name: vuepress-build
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
