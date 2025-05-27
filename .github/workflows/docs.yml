@@ -1,41 +1,41 @@
 name: docs
 
 on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+    push:
+        branches: [main]
+    workflow_dispatch:
 
 jobs:
-  docs:
-    runs-on: ubuntu-latest
+    docs:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: 'pnpm'
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-          run_install: true  # 自动 pnpm install
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 9
+                  run_install: true  # 自动执行 pnpm install
 
-      - name: Build VuePress site
-        run: pnpm build
+            - name: Build VuePress site
+              run: pnpm build
 
-      - name: Create CNAME file
-        run: echo "blog.hicheer.cc" > docs/.vuepress/dist/CNAME
+            - name: Create CNAME file
+              run: echo "blog.hicheer.cc" > docs/.vuepress/dist/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vuepress/dist
-          publish_branch: gh-pages
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: docs/.vuepress/dist
+                  publish_branch: gh-pages
