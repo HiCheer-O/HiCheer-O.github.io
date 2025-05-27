@@ -4,7 +4,8 @@ config:
   -
     type: banner
     full: true
-    banner: https://blog.hicheer.cc:3001/blog/cover/cover-01.png
+#    banner: https://blog.hicheer.cc:3001/blog/cover/cover-01.png
+    banner: https://hicheer.oss-cn-hangzhou.aliyuncs.com/blog/cover-01.png
     bannerMask:
       light: 0.1
       dark: 0.3

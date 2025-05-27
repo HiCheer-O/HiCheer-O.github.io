@@ -41,7 +41,8 @@ export default defineUserConfig({
 		// 作者信息
 		avatar: {
 			// 头像
-			url: 'https://blog.hicheer.cc:3001/blog/avatar/avatar.png',
+			// url: 'https://blog.hicheer.cc:3001/blog/avatar/avatar.png',
+			url: 'https://hicheer.oss-cn-hangzhou.aliyuncs.com/blog/avatar.jpg',
 			// 昵称
 			name: 'HiCheer',
 			// 描述
